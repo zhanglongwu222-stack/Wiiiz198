@@ -1,0 +1,9 @@
+{
+  "name": "mc-stock-cron",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "firebase": "^9.23.0"
+  }
+}
