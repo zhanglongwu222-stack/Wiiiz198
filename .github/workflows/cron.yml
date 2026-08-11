@@ -2,9 +2,9 @@ name: Auto Update Stock Market
 
 on:
   schedule:
-    # 設定每 5 分鐘自動觸發一次
+    # 每 5 分鐘自動執行一次
     - cron: '*/5 * * * *'
-  workflow_dispatch: # 允許手動點擊按鈕觸發
+  workflow_dispatch: # 允許在 GitHub 頁面手動點擊觸發
 
 jobs:
   run-cron:
@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Setup Node.js
-        uses: actions/checkout@v3
+        uses: actions/setup-node@v3
         with:
           node-version: '18'
 
