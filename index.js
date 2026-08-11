@@ -20,7 +20,13 @@ async function updatePrices() {
 
   const stockData = snap.data().list || [];
   const now = new Date();
-  const timeStr = now.toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit' });
+  
+  // 強制設定為台灣時區 (Asia/Taipei)
+  const timeStr = now.toLocaleTimeString('zh-TW', { 
+    hour: '2-digit', 
+    minute: '2-digit', 
+    timeZone: 'Asia/Taipei' 
+  });
 
   stockData.forEach(stock => {
     const randomPercent = (Math.random() * 0.06 - 0.03);
